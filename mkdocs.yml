@@ -1,0 +1,74 @@
+site_name: sw1-parcial2
+theme:
+  name: material
+  locale: es
+  language: es
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+      primary: black
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+      primary: black
+  features:
+    - content.code.copy
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.footer
+
+nav:
+  - index.md
+  - Enunciado:
+    - enunciado/index.md
+  - Documentación:
+    - documentación/index.md
+  - Tecnología:
+    - tecnología/index.md
+    - Para el análisis y diseño:
+      - tecnología/para-el-análisis-y-diseño/index.md
+      - DrawIO:
+        - tecnología/para-el-análisis-y-diseño/drawio/index.md
+    - Para la implementación:
+      - tecnología/para-la-implementación/index.md
+      - Instalar primero:
+        - tecnología/para-la-implementación/herramientas/index.md
+      - Frontend: 
+        - tecnología/para-la-implementación/frontend/index.md
+        - tecnología/para-la-implementación/frontend/toolpad/index.md
+        - tecnología/para-la-implementación/frontend/firebase/index.md
+      - Backend: 
+        - tecnología/para-la-implementación/backend/index.md
+        - tecnología/para-la-implementación/backend/crear-una-cuenta-en-netlify/index.md
+        - tecnología/para-la-implementación/backend/instalar-netlify-cli/index.md
+        - tecnología/para-la-implementación/backend/desplegar-el-frontend/index.md
+        - tecnología/para-la-implementación/backend/implementar-el-backend/index.md
+      - Colaboración:
+        - tecnología/para-la-implementación/colaboración/index.md
+        - tecnología/para-la-implementación/colaboración/realtime-database/index.md
+        - tecnología/para-la-implementación/colaboración/drawio-embed/index.md
+      - Inteligencia Artificial:
+        - tecnología/para-la-implementación/inteligencia-artificial/index.md
+        - tecnología/para-la-implementación/inteligencia-artificial/llamar-api-de-gemini/index.md
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+extra_css:
+  - stylesheets/extra.css
